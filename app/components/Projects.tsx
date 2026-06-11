@@ -1,0 +1,164 @@
+import Reveal from "./Reveal";
+
+type CaseStudy = {
+  label: string;
+  title: string;
+  desc: string;
+  stats: { num: string; label: string }[];
+  highlights: string[];
+  tags: string[];
+  link?: { url: string; text: string };
+};
+
+const caseStudies: CaseStudy[] = [
+  {
+    label: "Alva Personal Care · Trabalho atual",
+    title: "Compre Alva — Portal B2B & E-commerce",
+    desc: "Plataforma digital completa para lojistas da Alva Personal Care, unificando e-commerce B2B, autoatendimento, gestão de chamados e integração com ERP em um único ecossistema. Atuei principalmente no backend (Django/DRF) e fui responsável pelo módulo de e-commerce de ponta a ponta — modelagem, regras de negócio, APIs e integrações.",
+    stats: [
+      { num: "600+", label: "commits no monorepo (equipe de 3 devs)" },
+      { num: "~300", label: "commits de minha autoria — maior contribuidor" },
+      { num: "3", label: "integrações externas: ERP Omie, Datafrete e SendGrid" },
+      { num: "E2E", label: "testes com Playwright + observabilidade Prometheus/Grafana" },
+    ],
+    highlights: [
+      "Arquitetura genérica de carrinho/checkout (GenericForeignKey): o mesmo motor atende lives, campanhas, promoções e loja sem duplicação",
+      "Catálogo completo com tabelas de preço por cliente, SKUs liberados, mídias e especificações",
+      "CMS de vitrine com blocos dinâmicos configuráveis pelo admin — banners, sliders, reels e menus",
+      "Motor promocional: cupons, brindes por valor e quantidade, frete grátis condicional",
+      "Integração bidirecional com ERP Omie: NF-e, boletos e webhooks com idempotência",
+      "Help desk com fluxos configuráveis, campos dinâmicos e notificações multicanal",
+    ],
+    tags: [
+      "Django",
+      "DRF",
+      "Celery",
+      "PostgreSQL",
+      "Next.js 15",
+      "TypeScript",
+      "Docker",
+      "AWS S3",
+    ],
+  },
+  {
+    label: "Alva Personal Care · Trabalho atual",
+    title: "Alva Personal Care — Tema Shopify completo",
+    desc: "Tema customizado sobre o Dawn para marca brasileira de cosméticos naturais: da home às páginas de campanha sazonais, programa de cashback e área de carreiras. Tipografia proprietária (SeivaDisplay), sistema de metafields para tags, vídeos e produtos relacionados, e componentes reutilizáveis distribuídos por toda a loja.",
+    stats: [
+      { num: "90+", label: "seções e snippets Liquid criados do zero" },
+      { num: "24", label: "páginas institucionais com template próprio" },
+      { num: "7", label: "layouts de coleção" },
+      { num: "4", label: "layouts de página de produto" },
+    ],
+    highlights: [
+      "Mega menu custom com lógica de hover/click e sub-menus independentes",
+      "Carrosséis e banners com agendamento por data de início e fim",
+      "Card de produto com badge de desconto automático, swatches via metafield e troca de imagem no hover",
+      "Galeria de produto com thumbs sincronizadas e informações dinâmicas",
+      'Barra de progresso de metas no carrinho (“faltam R$ X para o brinde”)',
+      "Grids de vídeo estilo reels com controles de play e mute",
+    ],
+    tags: ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS"],
+    link: { url: "https://alvapersonalcare.com.br", text: "Visitar loja" },
+  },
+  {
+    label: "Grupo Alva · Trabalho atual",
+    title: "Good Mood — E-commerce Shopify",
+    desc: "Desenvolvimento completo da loja Shopify da Good Mood, marca do mesmo grupo da Alva Personal Care, partindo do Dawn 15.4.1 e transformando-o em tema sob medida: identidade visual com fontes proprietárias (Seiva Display e Seiva Poster), home e página institucional 100% custom com seções configuráveis pelo editor, PDP orientada a conversão e instrumentação de analytics via Google Tag Manager.",
+    stats: [
+      { num: "27", label: "seções Liquid criadas do zero" },
+      { num: "~80", label: "arquivos do Dawn modificados" },
+      { num: "6", label: "templates de página criados" },
+      { num: "22", label: "arquivos de fonte proprietária integrados (2 famílias)" },
+    ],
+    highlights: [
+      "Design system da marca: 12 cores nomeadas nas configurações globais e 2.000+ linhas refinadas no base.css",
+      "Home totalmente custom: hero slider, marquee infinito, vitrines de kits, vídeo slider estilo reels e feed do Instagram",
+      "Página 'Sobre' one-page com 10 seções exclusivas, incluindo linha do tempo da marca",
+      "PDP de conversão: blocos de benefícios, tabs, status de estoque, guia de medidas em modal e Judge.me",
+      "Cart drawer redesenhado com barra de progresso e estado vazio com arte própria",
+      "Botão flutuante de WhatsApp global e templates de FAQ, políticas e blog reestilizados",
+    ],
+    tags: ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM"],
+    link: { url: "https://www.goodmoodstore.com.br", text: "Visitar loja" },
+  },
+];
+
+const cards = [
+  {
+    title: "PegaBox",
+    desc: "Conceito de startup criado em evento de startups: lockers residenciais inteligentes por assinatura, atacando o last-mile delivery no Brasil. Pesquisa de campo com 90+ respondentes e três planos de assinatura.",
+    tags: ["Produto", "IoT", "Pesquisa"],
+  },
+  {
+    title: "Enriquecimento fiscal — TIPI",
+    desc: "Pipeline Django para popular alíquotas de IPI cruzando códigos NCM de produtos com a tabela TIPI oficial da Receita Federal.",
+    tags: ["Django", "Python", "Dados fiscais"],
+  },
+];
+
+export default function Projects() {
+  return (
+    <section id="projetos" className="section">
+      <h2 className="section-title">Projetos</h2>
+
+      {caseStudies.map((cs) => (
+        <Reveal key={cs.title}>
+          <article className="case-study">
+            <p className="case-label">{cs.label}</p>
+            <h3>{cs.title}</h3>
+            <p className="case-desc">{cs.desc}</p>
+
+            <div className="case-stats">
+              {cs.stats.map((s) => (
+                <div className="stat" key={s.label}>
+                  <span className="stat-num">{s.num}</span>
+                  <span className="stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <ul className="case-highlights">
+              {cs.highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <div className="card-tags">
+              {cs.tags.map((t) => (
+                <span className="tag" key={t}>{t}</span>
+              ))}
+            </div>
+
+            {cs.link && (
+              <a
+                className="store-link"
+                href={cs.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cs.link.text} <span className="arrow">↗</span>
+              </a>
+            )}
+          </article>
+        </Reveal>
+      ))}
+
+      <div className="projects-grid">
+        {cards.map((card, i) => (
+          <Reveal key={card.title} delay={i * 120}>
+            <article className="card">
+              <h3>{card.title}</h3>
+              <p>{card.desc}</p>
+              <div className="card-tags">
+                {card.tags.map((t) => (
+                  <span className="tag" key={t}>{t}</span>
+                ))}
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
