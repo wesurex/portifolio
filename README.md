@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Wesley
 
-## Getting Started
+Portfólio pessoal one-page construído com Next.js 16 (App Router + Turbopack), React 19 e Tailwind CSS 4. Site estático, multilíngue e sem dependências de runtime além do próprio Next.
 
-First, run the development server:
+## Idiomas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O site é trilíngue, com inglês como padrão:
+
+| Idioma | URL |
+| --- | --- |
+| 🇺🇸 Inglês (padrão) | `/` |
+| 🇧🇷 Português | `/pt-BR` |
+| 🇪🇸 Espanhol | `/es` |
+
+- `/en` redireciona para `/` (URL canônica sem prefixo).
+- Idiomas não suportados (ex.: `/fr`) retornam 404.
+- O roteamento de idioma é feito pelo `proxy.ts` na raiz (o sucessor do `middleware.ts` no Next 16): URLs sem prefixo recebem rewrite interno para o conteúdo EN.
+- Cada idioma tem `<html lang>`, `<title>`, description e `hreflang` próprios, e as três versões são pré-renderizadas no build (`generateStaticParams`).
+
+## Estrutura
+
+```
+app/
+├── [lang]/
+│   ├── layout.tsx          # root layout (fontes, metadata por idioma)
+│   ├── page.tsx            # home — carrega o dicionário e monta as seções
+│   ├── dictionaries.ts     # carregamento dos dicionários (server-only)
+│   ├── dictionary.ts       # tipos compartilhados dos dicionários
+│   └── dictionaries/
+│       ├── en.json         # todo o conteúdo em inglês
+│       ├── pt-BR.json      # português
+│       └── es.json         # espanhol
+├── components/             # Header, Hero, Marquee, Projects, About, Contact, Footer…
+└── globals.css             # estilos globais (tema escuro, gradiente, animações)
+proxy.ts                    # roteamento de idioma (rewrite/redirect)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Todo o texto visível vem dos dicionários JSON — os componentes recebem a fatia relevante via props. Para alterar conteúdo, edite os três arquivos em `app/[lang]/dictionaries/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Rodando localmente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev       # desenvolvimento em http://localhost:3000
+```
 
-## Learn More
+```bash
+npm run build     # build de produção
+npm start         # serve o build
+npm run lint      # eslint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js 16 (App Router, Server Components, Turbopack)
+- **UI:** React 19, Tailwind CSS 4, CSS custom em `globals.css`
+- **Fontes:** Space Grotesk e Inter via `next/font`
+- **i18n:** dicionários JSON + rotas `[lang]` + proxy, sem biblioteca externa

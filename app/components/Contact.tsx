@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import type { Dictionary } from "../[lang]/dictionary";
 
 const socials = [
   {
@@ -8,15 +9,12 @@ const socials = [
   { name: "GitHub", url: "https://github.com/wesurex" },
 ];
 
-export default function Contact() {
+export default function Contact({ dict }: { dict: Dictionary["contact"] }) {
   return (
     <section id="contato" className="section">
-      <h2 className="section-title">Contato</h2>
+      <h2 className="section-title">{dict.sectionTitle}</h2>
       <Reveal>
-        <p className="contact-desc">
-          Tem um projeto em mente ou quer trocar uma ideia sobre e-commerce e
-          produtos digitais?
-        </p>
+        <p className="contact-desc">{dict.desc}</p>
         <a className="contact-email" href="mailto:wesley.aqw@gmail.com">
           wesley.aqw@gmail.com
         </a>

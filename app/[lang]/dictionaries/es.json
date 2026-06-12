@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "title": "Wesley — Desarrollador Web",
+    "description": "Django, Next.js y e-commerce de punta a punta. Transformo ideas en productos que funcionan."
+  },
+  "header": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Desarrollador Full-Stack",
+    "titleBefore": "Construyo experiencias web ",
+    "titleEm": "modernas",
+    "titleAfter": " y escalables",
+    "desc": "Django, Next.js y e-commerce de punta a punta. Transformo ideas en productos que funcionan — del backend hasta la última animación del frontend.",
+    "cta": "Ver proyectos"
+  },
+  "projects": {
+    "sectionTitle": "Proyectos",
+    "caseStudies": [
+      {
+        "label": "Alva Personal Care · Trabajo actual",
+        "title": "Compre Alva — Portal B2B & E-commerce",
+        "desc": "Plataforma digital completa para los comercios de Alva Personal Care, unificando e-commerce B2B, autoservicio, gestión de tickets e integración con ERP en un único ecosistema. Trabajé principalmente en el backend (Django/DRF) y fui responsable del módulo de e-commerce de punta a punta — modelado, reglas de negocio, APIs e integraciones.",
+        "stats": [
+          { "num": "600+", "label": "commits en el monorepo (equipo de 3 devs)" },
+          { "num": "~300", "label": "commits de mi autoría — mayor contribuidor" },
+          { "num": "3", "label": "integraciones externas: ERP Omie, Datafrete y SendGrid" },
+          { "num": "E2E", "label": "tests con Playwright + observabilidad Prometheus/Grafana" }
+        ],
+        "highlights": [
+          "Arquitectura genérica de carrito/checkout (GenericForeignKey): el mismo motor atiende lives, campañas, promociones y tienda sin duplicación",
+          "Catálogo completo con tablas de precios por cliente, SKUs habilitados, medios y especificaciones",
+          "CMS de vitrina con bloques dinámicos configurables desde el admin — banners, sliders, reels y menús",
+          "Motor promocional: cupones, regalos por valor y cantidad, envío gratis condicional",
+          "Integración bidireccional con el ERP Omie: facturas electrónicas, boletos y webhooks con idempotencia",
+          "Help desk con flujos configurables, campos dinámicos y notificaciones multicanal"
+        ],
+        "tags": ["Django", "DRF", "Celery", "PostgreSQL", "Next.js 15", "TypeScript", "Docker", "AWS S3"]
+      },
+      {
+        "label": "Alva Personal Care · Trabajo actual",
+        "title": "Alva Personal Care — Tema Shopify completo",
+        "desc": "Tema personalizado sobre Dawn para una marca brasileña de cosméticos naturales: desde la home hasta las páginas de campañas estacionales, programa de cashback y área de carreras. Tipografía propietaria (SeivaDisplay), sistema de metafields para tags, videos y productos relacionados, y componentes reutilizables distribuidos por toda la tienda.",
+        "stats": [
+          { "num": "90+", "label": "secciones y snippets Liquid creados desde cero" },
+          { "num": "24", "label": "páginas institucionales con template propio" },
+          { "num": "7", "label": "layouts de colección" },
+          { "num": "4", "label": "layouts de página de producto" }
+        ],
+        "highlights": [
+          "Mega menú custom con lógica de hover/click y submenús independientes",
+          "Carruseles y banners con programación por fecha de inicio y fin",
+          "Card de producto con badge de descuento automático, swatches vía metafield y cambio de imagen al hacer hover",
+          "Galería de producto con miniaturas sincronizadas e información dinámica",
+          "Barra de progreso de metas en el carrito (“faltan R$ X para el regalo”)",
+          "Grids de video estilo reels con controles de play y mute"
+        ],
+        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS"],
+        "link": { "url": "https://alvapersonalcare.com.br", "text": "Visitar tienda" }
+      },
+      {
+        "label": "Grupo Alva · Trabajo actual",
+        "title": "Good Mood — E-commerce Shopify",
+        "desc": "Desarrollo completo de la tienda Shopify de Good Mood, marca del mismo grupo que Alva Personal Care, partiendo de Dawn 15.4.1 y transformándolo en un tema a medida: identidad visual con fuentes propietarias (Seiva Display y Seiva Poster), home y página institucional 100% custom con secciones configurables desde el editor, PDP orientada a conversión e instrumentación de analytics vía Google Tag Manager.",
+        "stats": [
+          { "num": "27", "label": "secciones Liquid creadas desde cero" },
+          { "num": "~80", "label": "archivos de Dawn modificados" },
+          { "num": "6", "label": "templates de página creados" },
+          { "num": "22", "label": "archivos de fuente propietaria integrados (2 familias)" }
+        ],
+        "highlights": [
+          "Design system de la marca: 12 colores nombrados en la configuración global y 2.000+ líneas refinadas en base.css",
+          "Home totalmente custom: hero slider, marquee infinito, vitrinas de kits, video slider estilo reels y feed de Instagram",
+          "Página 'Sobre nosotros' one-page con 10 secciones exclusivas, incluida la línea de tiempo de la marca",
+          "PDP de conversión: bloques de beneficios, tabs, estado de stock, guía de medidas en modal y Judge.me",
+          "Cart drawer rediseñado con barra de progreso y estado vacío con arte propio",
+          "Botón flotante de WhatsApp global y templates de FAQ, políticas y blog reestilizados"
+        ],
+        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM"],
+        "link": { "url": "https://www.goodmoodstore.com.br", "text": "Visitar tienda" }
+      }
+    ],
+    "cards": [
+      {
+        "title": "PegaBox",
+        "desc": "Concepto de startup creado en un evento de startups: lockers residenciales inteligentes por suscripción, atacando el last-mile delivery en Brasil. Investigación de campo con 90+ encuestados y tres planes de suscripción.",
+        "tags": ["Producto", "IoT", "Investigación"]
+      },
+      {
+        "title": "Enriquecimiento fiscal — TIPI",
+        "desc": "Pipeline Django para poblar alícuotas de IPI cruzando códigos NCM de productos con la tabla TIPI oficial de la Receita Federal de Brasil.",
+        "tags": ["Django", "Python", "Datos fiscales"]
+      }
+    ]
+  },
+  "about": {
+    "sectionTitle": "Sobre mí",
+    "p1": "Soy desarrollador de Joinville-SC (Brasil), nacido en noviembre de 1996, enfocado en e-commerce y productos digitales. Actualmente trabajo como dev full-stack en Alva Personal Care, de la base de datos al píxel: arquitectura de backend en Django, interfaces en Next.js y personalizaciones profundas en Shopify.",
+    "p2": "También tengo experiencia con WordPress y tiendas Tray, además de integraciones con Bling, Omie y REST APIs en general.",
+    "educationTitle": "Formación",
+    "education": [
+      { "title": "Análisis y Desarrollo de Sistemas", "detail": "Grado · UniSociesc · 1º de 5 semestres" },
+      { "title": "Técnico en Análisis y Desarrollo de Sistemas", "detail": "SENAI · concluido" },
+      { "title": "Inglés", "detail": "Rockfeller · 2º semestre" }
+    ],
+    "skills": [
+      { "area": "Backend", "stack": "Django · Python" },
+      { "area": "Frontend", "stack": "Next.js · React" },
+      { "area": "Web", "stack": "HTML · CSS · JavaScript" },
+      { "area": "E-commerce", "stack": "Shopify · Liquid · Tray" },
+      { "area": "CMS", "stack": "WordPress" },
+      { "area": "Integraciones", "stack": "Bling · Omie · REST APIs" },
+      { "area": "Infra", "stack": "WSL · Linux · CI" }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contacto",
+    "desc": "¿Tienes un proyecto en mente o quieres conversar sobre e-commerce y productos digitales?"
+  },
+  "footer": {
+    "text": "© 2026 Wesley — hecho con negro, blanco y morado."
+  }
+}

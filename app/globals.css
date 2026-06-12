@@ -154,6 +154,34 @@ h1, h2, h3 {
 .nav a:hover, .nav a:focus-visible { color: var(--text); }
 .nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
 
+.lang-switcher {
+  display: flex;
+  gap: 0.75rem;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.lang-switcher a {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a:focus-visible {
+  color: var(--text);
+}
+
+.lang-switcher a.active {
+  background: var(--gradient);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;

@@ -1,18 +1,19 @@
-export default function Hero() {
+import type { Dictionary } from "../[lang]/dictionary";
+
+export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
   return (
     <section className="hero">
       <div className="orb orb-1" aria-hidden="true" />
       <div className="orb orb-2" aria-hidden="true" />
-      <p className="hero-eyebrow">Desenvolvedor Full-Stack</p>
+      <p className="hero-eyebrow">{dict.eyebrow}</p>
       <h1 className="hero-title">
-        Construo experiências web <em>modernas</em> e escaláveis
+        {dict.titleBefore}
+        <em>{dict.titleEm}</em>
+        {dict.titleAfter}
       </h1>
-      <p className="hero-desc">
-        Django, Next.js e e-commerce de ponta a ponta. Transformo ideias em
-        produtos que funcionam — do backend à última animação do frontend.
-      </p>
+      <p className="hero-desc">{dict.desc}</p>
       <a className="hero-cta" href="#projetos">
-        Ver projetos
+        {dict.cta}
       </a>
     </section>
   );

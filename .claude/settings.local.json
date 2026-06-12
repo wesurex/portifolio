@@ -15,7 +15,20 @@
       "WebSearch",
       "Bash(npx next *)",
       "Read(//mnt/c/Users/wesley/Downloads/**)",
-      "Bash(cp /mnt/c/Users/wesley/Downloads/favico.ico /mnt/c/Users/wesley/Documents/portifolio/app/favicon.ico)"
+      "Bash(cp /mnt/c/Users/wesley/Downloads/favico.ico /mnt/c/Users/wesley/Documents/portifolio/app/favicon.ico)",
+      "Bash(npm install *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"/ -> %{http_code}\\\\n\" http://localhost:3199/)",
+      "Bash(curl -s http://localhost:3199/)",
+      "Bash(curl -s http://localhost:3199/es)",
+      "Bash(curl -s http://localhost:3199/en)",
+      "Bash(curl -s -o /dev/null -w \"/pt-BR -> %{http_code} -> %{redirect_url}\\\\n\" http://localhost:3199/pt-BR)",
+      "Bash(curl -s -o /dev/null -w \"/fr -> %{http_code}\\\\n\" http://localhost:3199/fr)",
+      "Bash(curl -s -o /dev/null -w \"/favicon.ico -> %{http_code}\\\\n\" http://localhost:3199/favicon.ico)",
+      "Bash(git -C /mnt/c/Users/wesley/Documents/portifolio status --short)",
+      "Bash(pkill -f \"next start\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(kill 2509)"
     ]
   }
 }
