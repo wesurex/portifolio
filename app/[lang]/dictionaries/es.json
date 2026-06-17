@@ -47,7 +47,8 @@
           { "num": "90+", "label": "secciones y snippets Liquid creados desde cero" },
           { "num": "24", "label": "páginas institucionales con template propio" },
           { "num": "7", "label": "layouts de colección" },
-          { "num": "4", "label": "layouts de página de producto" }
+          { "num": "4", "label": "layouts de página de producto" },
+          { "num": "17", "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores" }
         ],
         "highlights": [
           "Mega menú custom con lógica de hover/click y submenús independientes",
@@ -55,9 +56,10 @@
           "Card de producto con badge de descuento automático, swatches vía metafield y cambio de imagen al hacer hover",
           "Galería de producto con miniaturas sincronizadas e información dinámica",
           "Barra de progreso de metas en el carrito (“faltan R$ X para el regalo”)",
-          "Grids de video estilo reels con controles de play y mute"
+          "Grids de video estilo reels con controles de play y mute",
+          "Datos estructurados (Schema.org) desde cero: Product, BreadcrumbList, ItemList y Organization — 0 errores en el validador oficial; estrellas de reseñas, precios y rich results ya activos en Google Search"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS"],
+        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS", "Schema.org"],
         "link": { "url": "https://alvapersonalcare.com.br", "text": "Visitar tienda" }
       },
       {
@@ -68,7 +70,8 @@
           { "num": "27", "label": "secciones Liquid creadas desde cero" },
           { "num": "~80", "label": "archivos de Dawn modificados" },
           { "num": "6", "label": "templates de página creados" },
-          { "num": "22", "label": "archivos de fuente propietaria integrados (2 familias)" }
+          { "num": "22", "label": "archivos de fuente propietaria integrados (2 familias)" },
+          { "num": "12", "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores" }
         ],
         "highlights": [
           "Design system de la marca: 12 colores nombrados en la configuración global y 2.000+ líneas refinadas en base.css",
@@ -76,9 +79,10 @@
           "Página 'Sobre nosotros' one-page con 10 secciones exclusivas, incluida la línea de tiempo de la marca",
           "PDP de conversión: bloques de beneficios, tabs, estado de stock, guía de medidas en modal y Judge.me",
           "Cart drawer rediseñado con barra de progreso y estado vacío con arte propio",
-          "Botón flotante de WhatsApp global y templates de FAQ, políticas y blog reestilizados"
+          "Botón flotante de WhatsApp global y templates de FAQ, políticas y blog reestilizados",
+          "Datos estructurados (Schema.org) desde cero: Product (con precio detectado), BreadcrumbList, ItemList — 0 errores; snippets de reseñas y merchant listings activos en Google Search"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM"],
+        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM", "Schema.org"],
         "link": { "url": "https://www.goodmoodstore.com.br", "text": "Visitar tienda" }
       }
     ],

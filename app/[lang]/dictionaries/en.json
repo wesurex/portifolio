@@ -47,7 +47,8 @@
           { "num": "90+", "label": "Liquid sections and snippets built from scratch" },
           { "num": "24", "label": "institutional pages with their own template" },
           { "num": "7", "label": "collection layouts" },
-          { "num": "4", "label": "product page layouts" }
+          { "num": "4", "label": "product page layouts" },
+          { "num": "17", "label": "valid rich results on homepage (Google) — Schema.org built from scratch, 0 errors" }
         ],
         "highlights": [
           "Custom mega menu with hover/click logic and independent submenus",
@@ -55,9 +56,10 @@
           "Product card with automatic discount badge, metafield-driven swatches and image swap on hover",
           "Product gallery with synced thumbnails and dynamic information",
           "Goal progress bar in the cart (“R$ X to go for the free gift”)",
-          "Reels-style video grids with play and mute controls"
+          "Reels-style video grids with play and mute controls",
+          "Structured data (Schema.org) from scratch: Product, BreadcrumbList, ItemList and Organization — 0 errors in the official validator; star ratings, prices and rich results already live on Google Search"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS"],
+        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS", "Schema.org"],
         "link": { "url": "https://alvapersonalcare.com.br", "text": "Visit store" }
       },
       {
@@ -68,7 +70,8 @@
           { "num": "27", "label": "Liquid sections built from scratch" },
           { "num": "~80", "label": "Dawn files modified" },
           { "num": "6", "label": "page templates created" },
-          { "num": "22", "label": "proprietary font files integrated (2 families)" }
+          { "num": "22", "label": "proprietary font files integrated (2 families)" },
+          { "num": "12", "label": "valid rich results on homepage (Google) — Schema.org built from scratch, 0 errors" }
         ],
         "highlights": [
           "Brand design system: 12 named colors in the global settings and 2,000+ refined lines in base.css",
@@ -76,9 +79,10 @@
           "One-page 'About' with 10 exclusive sections, including the brand timeline",
           "Conversion PDP: benefit blocks, tabs, stock status, size guide modal and Judge.me",
           "Redesigned cart drawer with progress bar and custom-art empty state",
-          "Global floating WhatsApp button and restyled FAQ, policy and blog templates"
+          "Global floating WhatsApp button and restyled FAQ, policy and blog templates",
+          "Structured data (Schema.org) from scratch: Product (price detected), BreadcrumbList, ItemList — 0 errors; review snippets and merchant listings already live on Google Search"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM"],
+        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM", "Schema.org"],
         "link": { "url": "https://www.goodmoodstore.com.br", "text": "Visit store" }
       }
     ],
