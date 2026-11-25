@@ -1,5 +1,43 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 import type { Dictionary } from "../[lang]/dictionary";
+
+function ExternalLink({ link }: { link: { url: string; text: string } }) {
+  return (
+    <a
+      className="store-link"
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {link.text} <span className="arrow">↗</span>
+    </a>
+  );
+}
+
+// Captura de tela do site público do projeto (1280x720, em public/projects).
+function Shot({ src, alt }: { src: string; alt: string }) {
+  return (
+    <Image
+      className="shot"
+      src={src}
+      alt={alt}
+      width={1280}
+      height={720}
+      sizes="(max-width: 720px) 100vw, 720px"
+    />
+  );
+}
+
+function Tags({ tags }: { tags: string[] }) {
+  return (
+    <div className="card-tags">
+      {tags.map((t) => (
+        <span className="tag" key={t}>{t}</span>
+      ))}
+    </div>
+  );
+}
 
 export default function Projects({
   dict,
@@ -10,69 +48,53 @@ export default function Projects({
     <section id="projetos" className="section">
       <h2 className="section-title">{dict.sectionTitle}</h2>
 
-      {dict.caseStudies.map((cs) => (
-        <Reveal key={cs.title}>
-          <article className="case-study">
-            <p className="case-label">{cs.label}</p>
-            <h3>{cs.title}</h3>
-            <p className="case-desc">{cs.desc}</p>
+      <ol className="work-list">
+        {dict.caseStudies.map((cs, i) => (
+          <li key={cs.title}>
+            {/* <details> nativo: abre/fecha sem JS; o primeiro já vem aberto */}
+            <details className="work" open={i === 0}>
+              <summary>
+                <span className="work-idx">{String(i + 1).padStart(3, "0")}</span>
+                <h3>{cs.title}</h3>
+                <span className="work-label">{cs.label}</span>
+              </summary>
+              <div className="work-body">
+                {cs.image && <Shot src={cs.image} alt={cs.title} />}
+                <p className="case-desc">{cs.desc}</p>
 
-            <div className="case-stats">
-              {cs.stats.map((s) => (
-                <div className="stat" key={s.label}>
-                  <span className="stat-num">{s.num}</span>
-                  <span className="stat-label">{s.label}</span>
+                <div className="case-stats">
+                  {cs.stats.map((s) => (
+                    <div className="stat" key={s.label}>
+                      <span className="stat-num">{s.num}</span>
+                      <span className="stat-label">{s.label}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            <ul className="case-highlights">
-              {cs.highlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+                <ul className="case-highlights">
+                  {cs.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
 
-            <div className="card-tags">
-              {cs.tags.map((t) => (
-                <span className="tag" key={t}>{t}</span>
-              ))}
-            </div>
+                <Tags tags={cs.tags} />
+                {cs.link && <ExternalLink link={cs.link} />}
+              </div>
+            </details>
+          </li>
+        ))}
+      </ol>
 
-            {cs.link && (
-              <a
-                className="store-link"
-                href={cs.link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {cs.link.text} <span className="arrow">↗</span>
-              </a>
-            )}
-          </article>
-        </Reveal>
-      ))}
-
+      <h3 className="sub-title">{dict.cardsTitle}</h3>
       <div className="projects-grid">
         {dict.cards.map((card, i) => (
-          <Reveal key={card.title} delay={i * 120}>
+          <Reveal key={card.title} delay={i * 60}>
             <article className="card">
+              {card.image && <Shot src={card.image} alt={card.title} />}
               <h3>{card.title}</h3>
               <p>{card.desc}</p>
-              <div className="card-tags">
-                {card.tags.map((t) => (
-                  <span className="tag" key={t}>{t}</span>
-                ))}
-              </div>
-              {card.link && (
-                <a
-                  className="store-link"
-                  href={card.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {card.link.text} <span className="arrow">↗</span>
-                </a>
-              )}
+              <Tags tags={card.tags} />
+              {card.link && <ExternalLink link={card.link} />}
             </article>
           </Reveal>
         ))}

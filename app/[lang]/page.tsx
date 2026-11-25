@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import CursorGlow from "../components/CursorGlow";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
@@ -17,7 +16,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
-      <CursorGlow />
       <Header lang={lang} dict={dict.header} />
       <main>
         <Hero dict={dict.hero} />

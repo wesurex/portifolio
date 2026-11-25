@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Geist_Mono, Pixelify_Sans } from "next/font/google";
 import {
   defaultLocale,
   getDictionary,
@@ -9,16 +9,15 @@ import {
 } from "./dictionaries";
 import "../globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const mono = Geist_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const pixel = Pixelify_Sans({
+  variable: "--font-pixel",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: "700",
 });
 
 export async function generateStaticParams() {
@@ -50,7 +49,7 @@ export default async function RootLayout({
   if (!hasLocale(lang)) notFound();
 
   return (
-    <html lang={lang} className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang={lang} className={`${mono.variable} ${pixel.variable}`}>
       <body>{children}</body>
     </html>
   );

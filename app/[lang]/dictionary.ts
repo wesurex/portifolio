@@ -9,6 +9,7 @@ export type CaseStudy = {
   highlights: string[];
   tags: string[];
   link?: { url: string; text: string };
+  image?: string;
 };
 
 export type Dictionary = {
@@ -25,11 +26,13 @@ export type Dictionary = {
   projects: {
     sectionTitle: string;
     caseStudies: CaseStudy[];
+    cardsTitle: string;
     cards: {
       title: string;
       desc: string;
       tags: string[];
       link?: { url: string; text: string };
+      image?: string;
     }[];
   };
   about: {

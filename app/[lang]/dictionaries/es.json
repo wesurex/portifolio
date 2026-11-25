@@ -151,7 +151,8 @@
         "link": {
           "url": "https://alvapersonalcare.com.br",
           "text": "Visitar tienda"
-        }
+        },
+        "image": "/projects/alva.jpg"
       },
       {
         "label": "Grupo Alva · Trabajo actual",
@@ -202,9 +203,11 @@
         "link": {
           "url": "https://www.goodmood.com.br",
           "text": "Visitar tienda"
-        }
+        },
+        "image": "/projects/good-mood.jpg"
       }
     ],
+    "cardsTitle": "Otros proyectos",
     "cards": [
       {
         "title": "Live Alva — Live Shopping",
@@ -225,9 +228,10 @@
           "Desktop"
         ],
         "link": {
-          "url": "https://github.com/wesurex/lembrete-agua",
-          "text": "Ver en GitHub"
-        }
+          "url": "https://wrs-tools.vercel.app",
+          "text": "Visitar sitio"
+        },
+        "image": "/projects/wrs-tools.jpg"
       },
       {
         "title": "Geladeira Estoque",
@@ -335,6 +339,6 @@
     "desc": "¿Tienes un proyecto en mente o quieres conversar sobre e-commerce y productos digitales?"
   },
   "footer": {
-    "text": "© 2026 Wesley — hecho con negro, blanco y morado."
+    "text": "© 2026 Wesley — hecho con negro, blanco y naranja."
   }
 }
