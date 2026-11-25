@@ -11,6 +11,8 @@ const items = [
   "Celery",
   "PostgreSQL",
   "WordPress",
+  "Rust",
+  "Supabase",
 ];
 
 export default function Marquee() {

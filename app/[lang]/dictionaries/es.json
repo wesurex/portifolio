@@ -24,31 +24,107 @@
         "title": "Compre Alva — Portal B2B & E-commerce",
         "desc": "Plataforma digital completa para los comercios de Alva Personal Care, unificando e-commerce B2B, autoservicio, gestión de tickets e integración con ERP en un único ecosistema. Trabajé principalmente en el backend (Django/DRF) y fui responsable del módulo de e-commerce de punta a punta — modelado, reglas de negocio, APIs e integraciones.",
         "stats": [
-          { "num": "600+", "label": "commits en el monorepo (equipo de 3 devs)" },
-          { "num": "~300", "label": "commits de mi autoría — mayor contribuidor" },
-          { "num": "3", "label": "integraciones externas: ERP Omie, Datafrete y SendGrid" },
-          { "num": "E2E", "label": "tests con Playwright + observabilidad Prometheus/Grafana" }
+          {
+            "num": "2.700+",
+            "label": "commits en el monorepo (equipo de 5 devs)"
+          },
+          {
+            "num": "850+",
+            "label": "commits de mi autoría"
+          },
+          {
+            "num": "7",
+            "label": "integraciones externas: Omie, Datafrete, SendGrid, Huggy, Nextags (WhatsApp), CNPJá y Cadê Meu Pedido"
+          },
+          {
+            "num": "E2E",
+            "label": "tests con Playwright + observabilidad Prometheus/Grafana"
+          }
         ],
         "highlights": [
           "Arquitectura genérica de carrito/checkout (GenericForeignKey): el mismo motor atiende lives, campañas, promociones y tienda sin duplicación",
-          "Catálogo completo con tablas de precios por cliente, SKUs habilitados, medios y especificaciones",
-          "CMS de vitrina con bloques dinámicos configurables desde el admin — banners, sliders, reels y menús",
-          "Motor promocional: cupones, regalos por valor y cantidad, envío gratis condicional",
-          "Integración bidireccional con el ERP Omie: facturas electrónicas, boletos y webhooks con idempotencia",
-          "Help desk con flujos configurables, campos dinámicos y notificaciones multicanal"
+          "Catálogo completo con tablas de precio por cliente, SKUs habilitados, medios y especificaciones",
+          "CMS de vitrina con bloques dinámicos configurables desde el admin — banners programados, sliders, reels, categorías, cinta deslizante y “lo más comprado por ti”",
+          "Motor promocional: cupones, regalos por valor y cantidad, envío gratis condicional y descuento manual por ítem",
+          "Integración bidireccional con el ERP Omie: facturas electrónicas, boletos, webhooks idempotentes y aprobación de pedidos por lote con cola serial",
+          "Costos y kits: costo sincronizado desde Omie por webhook, composición de kits con recálculo por lote y bloqueo automático de productos sin costo",
+          "Help desk con flujos configurables, campos dinámicos, @menciones, automatización de e-mails por etapa y SLA en días hábiles",
+          "Encuestas de NPS y CSAT: invitación por WhatsApp tras la entrega o la atención, cadencia de recordatorios configurable, formulario público e informes con exportación CSV",
+          "Alta de clientes con reconocimiento de cadenas vía CNPJá, decisión auditada en la aprobación y reglas específicas para clientes SUFRAMA"
         ],
-        "tags": ["Django", "DRF", "Celery", "PostgreSQL", "Next.js 15", "TypeScript", "Docker", "AWS S3"]
+        "tags": [
+          "Django",
+          "DRF",
+          "Celery",
+          "PostgreSQL",
+          "Next.js 15",
+          "TypeScript",
+          "Docker",
+          "AWS S3"
+        ]
+      },
+      {
+        "label": "Alva Personal Care · Trabajo actual",
+        "title": "Alva Tools — CRM de representantes y operaciones internas",
+        "desc": "Aplicación interna en Django integrada con el ERP Omie, con herramientas para mayoreo, conciliación de retail (Shopify × Bling), logística y facturación, y un nuevo frontend en Next.js que reemplaza las pantallas heredadas. Trabajé principalmente en CadU — el CRM de leads de los representantes comerciales — del modelo de datos a la interfaz, además de los módulos de logística y conciliación.",
+        "stats": [
+          {
+            "num": "900+",
+            "label": "commits en el repositorio"
+          },
+          {
+            "num": "180+",
+            "label": "commits de mi autoría"
+          },
+          {
+            "num": "2",
+            "label": "tiendas Shopify conciliadas contra Bling"
+          }
+        ],
+        "highlights": [
+          "Kanban de leads con búsqueda, filtros por cadena y vendedor y exportación CSV",
+          "Área de actuación del representante: mapas de Brasil y de los estados en Leaflet, radio en km por ciudad y base de municipios del IBGE con coordenadas",
+          "Lead vencido: cola “Esperando decisión” para la gestión, decisión por lote (mar abierto o entrega a un representante) con sugerencia por área de actuación y aviso por e-mail",
+          "Varios contactos por empresa, detección de posibles duplicados y alta de representante con confirmación de e-mail",
+          "Logística: importador XLSX idempotente (actualiza estados sin duplicar pedidos) y dashboard filtrable por período",
+          "API documentada en OpenAPI, con cliente generado por Kubb y mocks en el frontend"
+        ],
+        "tags": [
+          "Django",
+          "DRF",
+          "Celery",
+          "PostgreSQL",
+          "Next.js",
+          "TypeScript",
+          "Leaflet",
+          "OpenAPI"
+        ]
       },
       {
         "label": "Alva Personal Care · Trabajo actual",
         "title": "Alva Personal Care — Tema Shopify completo",
         "desc": "Tema personalizado sobre Dawn para una marca brasileña de cosméticos naturales: desde la home hasta las páginas de campañas estacionales, programa de cashback y área de carreras. Tipografía propietaria (SeivaDisplay), sistema de metafields para tags, videos y productos relacionados, y componentes reutilizables distribuidos por toda la tienda.",
         "stats": [
-          { "num": "90+", "label": "secciones y snippets Liquid creados desde cero" },
-          { "num": "24", "label": "páginas institucionales con template propio" },
-          { "num": "7", "label": "layouts de colección" },
-          { "num": "4", "label": "layouts de página de producto" },
-          { "num": "17", "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores" }
+          {
+            "num": "90+",
+            "label": "secciones y snippets Liquid creados desde cero"
+          },
+          {
+            "num": "24",
+            "label": "páginas institucionales con template propio"
+          },
+          {
+            "num": "7",
+            "label": "layouts de colección"
+          },
+          {
+            "num": "4",
+            "label": "layouts de página de producto"
+          },
+          {
+            "num": "17",
+            "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores"
+          }
         ],
         "highlights": [
           "Mega menú custom con lógica de hover/click y submenús independientes",
@@ -57,21 +133,51 @@
           "Galería de producto con miniaturas sincronizadas e información dinámica",
           "Barra de progreso de metas en el carrito (“faltan R$ X para el regalo”)",
           "Grids de video estilo reels con controles de play y mute",
-          "Datos estructurados (Schema.org) desde cero: Product, BreadcrumbList, ItemList y Organization — 0 errores en el validador oficial; estrellas de reseñas, precios y rich results ya activos en Google Search"
+          "Datos estructurados (Schema.org) desde cero: Product, BreadcrumbList, ItemList y Organization — 0 errores en el validador oficial; estrellas de reseñas, precios y rich results ya activos en Google Search",
+          "Core Web Vitals: diagnóstico con CrUX y PageSpeed, dos causas de CLS aisladas y corregidas — el CLS de laboratorio bajó de 0,15–0,20 a menos de 0,03 en home, colección y PDP",
+          "Rendimiento y accesibilidad: preload de la imagen de LCP, GTM diferido, eliminación de Video.js y jerarquía de encabezados corregida",
+          "Tema de campaña Blue Friday 2026 y carruseles programados reutilizados en toda la tienda"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "Metafields", "JavaScript", "CSS", "Schema.org"],
-        "link": { "url": "https://alvapersonalcare.com.br", "text": "Visitar tienda" }
+        "tags": [
+          "Shopify",
+          "Liquid",
+          "Dawn",
+          "Metafields",
+          "JavaScript",
+          "CSS",
+          "Schema.org",
+          "Core Web Vitals"
+        ],
+        "link": {
+          "url": "https://alvapersonalcare.com.br",
+          "text": "Visitar tienda"
+        }
       },
       {
         "label": "Grupo Alva · Trabajo actual",
         "title": "Good Mood — E-commerce Shopify",
         "desc": "Desarrollo completo de la tienda Shopify de Good Mood, marca del mismo grupo que Alva Personal Care, partiendo de Dawn 15.4.1 y transformándolo en un tema a medida: identidad visual con fuentes propietarias (Seiva Display y Seiva Poster), home y página institucional 100% custom con secciones configurables desde el editor, PDP orientada a conversión e instrumentación de analytics vía Google Tag Manager.",
         "stats": [
-          { "num": "27", "label": "secciones Liquid creadas desde cero" },
-          { "num": "~80", "label": "archivos de Dawn modificados" },
-          { "num": "6", "label": "templates de página creados" },
-          { "num": "22", "label": "archivos de fuente propietaria integrados (2 familias)" },
-          { "num": "12", "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores" }
+          {
+            "num": "27",
+            "label": "secciones Liquid creadas desde cero"
+          },
+          {
+            "num": "~80",
+            "label": "archivos de Dawn modificados"
+          },
+          {
+            "num": "6",
+            "label": "templates de página creados"
+          },
+          {
+            "num": "22",
+            "label": "archivos de fuente propietaria integrados (2 familias)"
+          },
+          {
+            "num": "12",
+            "label": "rich results válidos en la home (Google) — Schema.org desde cero, 0 errores"
+          }
         ],
         "highlights": [
           "Design system de la marca: 12 colores nombrados en la configuración global y 2.000+ líneas refinadas en base.css",
@@ -80,43 +186,148 @@
           "PDP de conversión: bloques de beneficios, tabs, estado de stock, guía de medidas en modal y Judge.me",
           "Cart drawer rediseñado con barra de progreso y estado vacío con arte propio",
           "Botón flotante de WhatsApp global y templates de FAQ, políticas y blog reestilizados",
-          "Datos estructurados (Schema.org) desde cero: Product (con precio detectado), BreadcrumbList, ItemList — 0 errores; snippets de reseñas y merchant listings activos en Google Search"
+          "Datos estructurados (Schema.org) desde cero: Product (con precio detectado), BreadcrumbList, ItemList — 0 errores; snippets de reseñas y merchant listings activos en Google Search",
+          "Landing page de armado de kits (kit builder) con descripción, beneficios y destacados por kit",
+          "Auditoría de Core Web Vitals (CrUX + PageSpeed) con plan de acción priorizado para el INP en móvil"
         ],
-        "tags": ["Shopify", "Liquid", "Dawn", "JavaScript", "CSS", "GTM", "Schema.org"],
-        "link": { "url": "https://www.goodmoodstore.com.br", "text": "Visitar tienda" }
+        "tags": [
+          "Shopify",
+          "Liquid",
+          "Dawn",
+          "JavaScript",
+          "CSS",
+          "GTM",
+          "Schema.org"
+        ],
+        "link": {
+          "url": "https://www.goodmood.com.br",
+          "text": "Visitar tienda"
+        }
       }
     ],
     "cards": [
       {
+        "title": "Live Alva — Live Shopping",
+        "desc": "Plataforma de ventas en vivo de Alva. Integré las lives de mayoreo B2B con Compre Alva (tramos de precio, stock de seguridad, pedido mínimo y dirección de entrega) e implementé el checkout B2C como Draft Order en Shopify, con el precio definido solo en el backend.",
+        "tags": [
+          "Django",
+          "WebSockets",
+          "Next.js",
+          "Shopify"
+        ]
+      },
+      {
+        "title": "WRS Tools",
+        "desc": "App de bandeja para escritorio: recordatorios de agua y de fichaje, control de horas con exportación CSV, agenda, tareas e informes, en 3 idiomas y sin cuenta. Nació en Electron y fue portada a Rust nativo, con instaladores para Windows y Linux y actualización automática.",
+        "tags": [
+          "Rust",
+          "Electron",
+          "Desktop"
+        ],
+        "link": {
+          "url": "https://github.com/wesurex/lembrete-agua",
+          "text": "Ver en GitHub"
+        }
+      },
+      {
+        "title": "Geladeira Estoque",
+        "desc": "Control compartido de la heladera de la oficina: cada persona tiene su stock, da de baja desde el celular (incluso por código QR) y pide prestado con aprobación y saldo. Funciones transaccionales y RLS en Postgres, pendientes en tiempo real y PWA.",
+        "tags": [
+          "Next.js",
+          "Supabase",
+          "PostgreSQL",
+          "PWA"
+        ],
+        "link": {
+          "url": "https://frigobar-estoque.vercel.app",
+          "text": "Abrir app"
+        }
+      },
+      {
+        "title": "Sorteo Blue Friday Alva",
+        "desc": "Backend de una promoción autorizada: registro desde la LP en WordPress, confirmación por código en WhatsApp, generación del número de la suerte, sorteo de 25 ganadores según la Lotería Federal de Brasil y panel administrativo. PHP 8 sin dependencias y MySQL.",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "WhatsApp API"
+        ]
+      },
+      {
         "title": "PegaBox",
         "desc": "Concepto de startup creado en un evento de startups: lockers residenciales inteligentes por suscripción, atacando el last-mile delivery en Brasil. Investigación de campo con 90+ encuestados y tres planes de suscripción.",
-        "tags": ["Producto", "IoT", "Investigación"]
+        "tags": [
+          "Producto",
+          "IoT",
+          "Investigación"
+        ]
       },
       {
         "title": "Enriquecimiento fiscal — TIPI",
         "desc": "Pipeline Django para poblar alícuotas de IPI cruzando códigos NCM de productos con la tabla TIPI oficial de la Receita Federal de Brasil.",
-        "tags": ["Django", "Python", "Datos fiscales"]
+        "tags": [
+          "Django",
+          "Python",
+          "Datos fiscales"
+        ]
       }
     ]
   },
   "about": {
     "sectionTitle": "Sobre mí",
     "p1": "Soy desarrollador de Joinville-SC (Brasil), nacido en noviembre de 1996, enfocado en e-commerce y productos digitales. Actualmente trabajo como dev full-stack en Alva Personal Care, de la base de datos al píxel: arquitectura de backend en Django, interfaces en Next.js y personalizaciones profundas en Shopify.",
-    "p2": "También tengo experiencia con WordPress y tiendas Tray, además de integraciones con Bling, Omie y REST APIs en general.",
+    "p2": "También tengo experiencia con WordPress y tiendas Tray, además de integraciones con Bling, Omie y REST APIs en general. En proyectos personales exploro Rust para apps de escritorio y Next.js con Supabase.",
     "educationTitle": "Formación",
     "education": [
-      { "title": "Análisis y Desarrollo de Sistemas", "detail": "Grado · UniSociesc · 1º de 5 semestres" },
-      { "title": "Técnico en Análisis y Desarrollo de Sistemas", "detail": "SENAI · concluido" },
-      { "title": "Inglés", "detail": "Rockfeller · 2º semestre" }
+      {
+        "title": "Análisis y Desarrollo de Sistemas",
+        "detail": "Grado · UniSociesc · 1º de 5 semestres"
+      },
+      {
+        "title": "Técnico en Análisis y Desarrollo de Sistemas",
+        "detail": "SENAI · concluido"
+      },
+      {
+        "title": "Inglés",
+        "detail": "Rockfeller · 2º semestre"
+      }
     ],
     "skills": [
-      { "area": "Backend", "stack": "Django · Python" },
-      { "area": "Frontend", "stack": "Next.js · React" },
-      { "area": "Web", "stack": "HTML · CSS · JavaScript" },
-      { "area": "E-commerce", "stack": "Shopify · Liquid · Tray" },
-      { "area": "CMS", "stack": "WordPress" },
-      { "area": "Integraciones", "stack": "Bling · Omie · REST APIs" },
-      { "area": "Infra", "stack": "WSL · Linux · CI" }
+      {
+        "area": "Backend",
+        "stack": "Django · Python · PHP"
+      },
+      {
+        "area": "Frontend",
+        "stack": "Next.js · React · TypeScript"
+      },
+      {
+        "area": "Web",
+        "stack": "HTML · CSS · JavaScript"
+      },
+      {
+        "area": "E-commerce",
+        "stack": "Shopify · Liquid · Tray"
+      },
+      {
+        "area": "Bases de datos",
+        "stack": "PostgreSQL · MySQL · Supabase"
+      },
+      {
+        "area": "Desktop",
+        "stack": "Rust · Electron"
+      },
+      {
+        "area": "CMS",
+        "stack": "WordPress"
+      },
+      {
+        "area": "Integraciones",
+        "stack": "Omie · Bling · Shopify API · WhatsApp · REST APIs"
+      },
+      {
+        "area": "Infra",
+        "stack": "Docker · Celery · Linux · CI"
+      }
     ]
   },
   "contact": {

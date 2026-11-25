@@ -25,7 +25,12 @@ export type Dictionary = {
   projects: {
     sectionTitle: string;
     caseStudies: CaseStudy[];
-    cards: { title: string; desc: string; tags: string[] }[];
+    cards: {
+      title: string;
+      desc: string;
+      tags: string[];
+      link?: { url: string; text: string };
+    }[];
   };
   about: {
     sectionTitle: string;

@@ -63,6 +63,16 @@ export default function Projects({
                   <span className="tag" key={t}>{t}</span>
                 ))}
               </div>
+              {card.link && (
+                <a
+                  className="store-link"
+                  href={card.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {card.link.text} <span className="arrow">↗</span>
+                </a>
+              )}
             </article>
           </Reveal>
         ))}
