@@ -264,7 +264,8 @@
           "Product",
           "IoT",
           "Research"
-        ]
+        ],
+        "github": "https://github.com/wesurex/pegabox-mvp"
       },
       {
         "title": "Tax data enrichment — TIPI",

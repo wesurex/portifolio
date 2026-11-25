@@ -10,6 +10,7 @@ export type CaseStudy = {
   tags: string[];
   link?: { url: string; text: string };
   image?: string;
+  github?: string;
 };
 
 export type Dictionary = {
@@ -38,6 +39,7 @@ export type Dictionary = {
       tags: string[];
       link?: { url: string; text: string };
       image?: string;
+      github?: string;
     }[];
   };
   experience: {

@@ -8,7 +8,8 @@
   --text: #f1eee8;
   --text-dim: #8d8a84;
   --accent: #ff5a1f; /* único acento: trocar aqui muda o site todo */
-  --pad: clamp(1.25rem, 5vw, 4.5rem);
+  /* conteúdo limitado a 1440px: acima disso o respiro lateral cresce */
+  --pad: max(clamp(1.25rem, 5vw, 4.5rem), calc((100% - 1440px) / 2));
   --mono: var(--font-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
   --pixel: var(--font-pixel), var(--mono);
 }
@@ -329,6 +330,8 @@ a { color: inherit; }
   border: 1px solid var(--line);
   color: var(--text-dim);
 }
+
+.links { display: flex; flex-wrap: wrap; column-gap: 1.75rem; }
 
 .store-link {
   display: inline-flex;

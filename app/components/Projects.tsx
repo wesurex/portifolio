@@ -29,6 +29,21 @@ function Shot({ src, alt }: { src: string; alt: string }) {
   );
 }
 
+function Links({
+  link,
+  github,
+}: {
+  link?: { url: string; text: string };
+  github?: string;
+}) {
+  return (
+    <div className="links">
+      {link && <ExternalLink link={link} />}
+      {github && <ExternalLink link={{ url: github, text: "GitHub" }} />}
+    </div>
+  );
+}
+
 function Tags({ tags }: { tags: string[] }) {
   return (
     <div className="card-tags">
@@ -78,7 +93,7 @@ export default function Projects({
                 </ul>
 
                 <Tags tags={cs.tags} />
-                {cs.link && <ExternalLink link={cs.link} />}
+                <Links link={cs.link} github={cs.github} />
               </div>
             </details>
           </li>
@@ -94,7 +109,7 @@ export default function Projects({
               <h3>{card.title}</h3>
               <p>{card.desc}</p>
               <Tags tags={card.tags} />
-              {card.link && <ExternalLink link={card.link} />}
+              <Links link={card.link} github={card.github} />
             </article>
           </Reveal>
         ))}

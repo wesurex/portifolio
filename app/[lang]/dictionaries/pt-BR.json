@@ -264,7 +264,8 @@
           "Produto",
           "IoT",
           "Pesquisa"
-        ]
+        ],
+        "github": "https://github.com/wesurex/pegabox-mvp"
       },
       {
         "title": "Enriquecimento fiscal — TIPI",
