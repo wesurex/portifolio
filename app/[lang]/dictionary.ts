@@ -14,7 +14,12 @@ export type CaseStudy = {
 
 export type Dictionary = {
   metadata: { title: string; description: string };
-  header: { projects: string; about: string; contact: string };
+  header: {
+    projects: string;
+    experience: string;
+    about: string;
+    contact: string;
+  };
   hero: {
     eyebrow: string;
     titleBefore: string;
@@ -34,6 +39,18 @@ export type Dictionary = {
       link?: { url: string; text: string };
       image?: string;
     }[];
+  };
+  experience: {
+    sectionTitle: string;
+    items: {
+      period: string;
+      role: string;
+      company: string;
+      desc?: string;
+      tags: string[];
+    }[];
+    certsTitle: string;
+    certs: { title: string; detail: string }[];
   };
   about: {
     sectionTitle: string;

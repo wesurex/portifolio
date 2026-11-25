@@ -5,6 +5,7 @@
   },
   "header": {
     "projects": "Projects",
+    "experience": "Experience",
     "about": "About",
     "contact": "Contact"
   },
@@ -273,6 +274,74 @@
           "Python",
           "Tax data"
         ]
+      }
+    ]
+  },
+  "experience": {
+    "sectionTitle": "Experience",
+    "items": [
+      {
+        "period": "Jan 2025 — present",
+        "role": "Full-stack developer",
+        "company": "Alva Personal Care · Joinville, SC",
+        "tags": [
+          "Django REST Framework",
+          "Next.js",
+          "Shopify",
+          "Cloudflare"
+        ],
+        "desc": "Compre Alva B2B portal, Alva Tools and the Alva and Good Mood Shopify stores — from the database to the interface."
+      },
+      {
+        "period": "Dec 2024 — Jan 2025",
+        "role": "Data analyst",
+        "company": "Alva Personal Care · Joinville, SC",
+        "tags": [
+          "PostgreSQL",
+          "SQL"
+        ],
+        "desc": "SQL analysis and queries over operational data, before moving into development."
+      },
+      {
+        "period": "Aug 2024 — Dec 2024",
+        "role": "Front-end developer",
+        "company": "Aupi Soluções em TI · Joinville, SC",
+        "tags": [
+          "Shopify",
+          "Elementor"
+        ],
+        "desc": "Shopify stores and WordPress sites with Elementor for the agency's clients."
+      },
+      {
+        "period": "Jul 2024 — Nov 2024",
+        "role": "IT intern",
+        "company": "Aupi Soluções em TI · Joinville, SC",
+        "tags": [
+          "TypeScript"
+        ]
+      }
+    ],
+    "certsTitle": "Events and certificates",
+    "certs": [
+      {
+        "title": "Startup Weekend Joinville",
+        "detail": "Techstars · Apr 2026"
+      },
+      {
+        "title": "Codecon Universe 26",
+        "detail": "Attendance · May 2026"
+      },
+      {
+        "title": "Codecon Summit 25",
+        "detail": "Attendance · Jul 2025"
+      },
+      {
+        "title": "Codecon Summit 24",
+        "detail": "Attendance · Sep 2024"
+      },
+      {
+        "title": "NLW Journey — Fullstack",
+        "detail": "Rocketseat · Jul 2024"
       }
     ]
   },

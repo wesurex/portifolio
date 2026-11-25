@@ -22,6 +22,7 @@ export default function Header({
       </div>
       <nav className="nav">
         <a href="#projetos">{dict.projects}</a>
+        <a href="#experiencia">{dict.experience}</a>
         <a href="#sobre">{dict.about}</a>
         <a href="#contato">{dict.contact}</a>
       </nav>

@@ -4,7 +4,7 @@ import type { Dictionary } from "../[lang]/dictionary";
 const socials = [
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/wesley-reinert-da-silva-4b9970206",
+    url: "https://www.linkedin.com/in/wesleyreinert",
   },
   { name: "GitHub", url: "https://github.com/wesurex" },
 ];

@@ -5,6 +5,7 @@
   },
   "header": {
     "projects": "Projetos",
+    "experience": "Experiência",
     "about": "Sobre",
     "contact": "Contato"
   },
@@ -273,6 +274,74 @@
           "Python",
           "Dados fiscais"
         ]
+      }
+    ]
+  },
+  "experience": {
+    "sectionTitle": "Experiência",
+    "items": [
+      {
+        "period": "jan 2025 — atual",
+        "role": "Desenvolvedor full stack",
+        "company": "Alva Personal Care · Joinville, SC",
+        "tags": [
+          "Django REST Framework",
+          "Next.js",
+          "Shopify",
+          "Cloudflare"
+        ],
+        "desc": "Portal B2B Compre Alva, Alva Tools e as lojas Shopify da Alva e da Good Mood — do banco de dados à interface."
+      },
+      {
+        "period": "dez 2024 — jan 2025",
+        "role": "Analista de dados",
+        "company": "Alva Personal Care · Joinville, SC",
+        "tags": [
+          "PostgreSQL",
+          "SQL"
+        ],
+        "desc": "Análises e consultas em SQL sobre os dados da operação, antes de migrar para o desenvolvimento."
+      },
+      {
+        "period": "ago 2024 — dez 2024",
+        "role": "Desenvolvedor de front-end",
+        "company": "Aupi Soluções em TI · Joinville, SC",
+        "tags": [
+          "Shopify",
+          "Elementor"
+        ],
+        "desc": "Lojas Shopify e sites em WordPress com Elementor para clientes da agência."
+      },
+      {
+        "period": "jul 2024 — nov 2024",
+        "role": "Estagiário de TI",
+        "company": "Aupi Soluções em TI · Joinville, SC",
+        "tags": [
+          "TypeScript"
+        ]
+      }
+    ],
+    "certsTitle": "Eventos e certificados",
+    "certs": [
+      {
+        "title": "Startup Weekend Joinville",
+        "detail": "Techstars · abr 2026"
+      },
+      {
+        "title": "Codecon Universe 26",
+        "detail": "Participação · mai 2026"
+      },
+      {
+        "title": "Codecon Summit 25",
+        "detail": "Participação · jul 2025"
+      },
+      {
+        "title": "Codecon Summit 24",
+        "detail": "Participação · set 2024"
+      },
+      {
+        "title": "NLW Journey — Fullstack",
+        "detail": "Rocketseat · jul 2024"
       }
     ]
   },
